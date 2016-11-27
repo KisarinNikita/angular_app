@@ -1,0 +1,18 @@
+<div class="header container">
+  <a href="#/add" title="Добавить акцию">
+    <img class="header_add" src="img/plus.png">
+  </a>
+</div>
+
+<div class="container">
+  <div class="col-lg-4 col-sm-6 col-xs-12" ng-repeat="stock in stocks" ng-if='stock.id !== "end"'>
+    <div class="stock-block">
+      <h2 class="stock-block_title">{{stock.name}}</h2>
+      <div class="vertical">
+        <p>акция заканчивается через:<p>
+        <span countdown='' date='{{stock.date}}'>&nbsp;</span>
+      </div>
+      <a class="stock-block_edit" href="#/edit/{{stock.id}}">редактировать</a>
+    </div>
+  </div>
+</div>

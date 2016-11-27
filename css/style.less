@@ -1,0 +1,156 @@
+
+[ng\:cloak], [ng-cloak], .ng-cloak{
+	display: none;
+}
+
+.transition(@time){
+	transition: all @time linear;
+	-moz-transition: all @time linear;
+	-webkit-transition: all @time linear;
+	-o-transition: all @time linear;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: #f3f3f3;
+}
+
+.header{
+	height: 100px;
+	background: #e3e3e3;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	position: relative;
+
+	.header_add{
+		width: 70px;
+		position: absolute;
+		left:50%;
+		margin-left: -37.5px;
+		top: 15px;
+		opacity: 0.8;
+		.transition(200ms);
+
+		&:hover{
+			opacity: 1;
+			.transition(200ms);
+		}
+	}
+
+	.header_back{
+		width: 50px;
+		position: absolute;
+		left:5%;
+		top: 25px;
+		opacity: 0.8;
+		.transition(200ms);
+
+		&:hover{
+			opacity: 1;
+			.transition(200ms);
+		}
+	}
+}
+
+.stock-block{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	height: 300px;
+	margin-bottom: 25px;
+	background: #fefefe;
+	position: relative;
+	text-align: center;
+
+	.vertical{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-45%);
+		width: 100%;
+		text-align: center;
+		left:0px;
+
+		span{
+			font-size: 30px;
+			font-weight: 600;
+			color: #1d936b;
+
+		}
+	}
+
+	.stock-block_title{
+		width: 100%;
+		font-weight: 500;
+		text-align: center;
+		color:#1a1a1a;
+		font-size: 24px;
+		text-transform: uppercase;
+		overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+		text-overflow: ellipsis; /* Добавляем многоточие */
+	}
+
+	p{
+		width: 100%;
+		font-weight: 300;
+		text-align: center;
+		color:#434343;
+		font-size: 16px;
+		margin-bottom: 0px;
+	}
+
+	.stock-block_edit{
+		position: absolute;
+		bottom: 25px;
+		width: 104px;
+		left:50%;
+		margin-left: -52px;
+		color:#939393;
+	}
+}
+
+.stock-edit{
+	height: 100%;
+	margin-top: 35px;
+	text-align: center;
+	padding-top: 35px;
+	padding-bottom: 35px;
+
+	label{
+		margin-top: -10px;
+	}
+
+	input[type="text"]{
+		height: 50px;
+		line-height: 50px;
+		width: 80%;
+		text-align: center;
+		color:#4c4c4c;
+		padding-left:15px;
+		padding-right: 15px;
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+
+	input[type="submit"]{
+		height: 50px;
+		line-height: 50px;
+		width: 50%;
+		text-align: center;
+		padding-left: 5px 15px;
+		font-size: 16px;
+		background: #1a936b;
+		border: none;
+		color:#f2f2f2;
+		opacity: 0.8;
+		.transition(200ms);
+
+		&:hover{
+			opacity: 1;
+			.transition(200ms);
+		}
+	}
+}
